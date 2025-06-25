@@ -1,0 +1,31 @@
+<template>
+    <div class = "banner">
+        <img src = "{userPic}" class="profile-pic"/>
+        <div class="name">{fullName}</div>
+        <div class = "Designation">{designation} at {companyName}</div>
+        <div class = "location">{companyLocation}</div>
+      <!--  <div class="Email" >sairajasaride113@gmail.com</div>
+        <div class="Phone">+91 9999999999</div>-->
+
+
+        <div>
+            <template if:true={linkedinUrl}>
+            <a href ={linkedinUrl} target="_blank">
+                <img src ={linkedin} class="social-icon">
+            </a>
+        </template>
+
+        <template if:true={githubUrl}>
+            <a href ={githubUrl} target="_blank">
+                <img src = "{github}" class="social-icon">
+            </a>
+        </template>
+
+        <template if:true={trailheadUrl}>
+            <a href = "{trailheadUrl}" target="_blank">
+                <img src = "{trailhead}" class="social-icon">
+            </a>
+        </template>
+        </div>
+    </div>
+</template>
